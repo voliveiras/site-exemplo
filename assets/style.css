@@ -46,16 +46,17 @@ body{
 
 .lista{
     width: 100%;
+    
+}
+.lista ul{
     display: flex;
-    flex-direction: row;
 }
 
-
-
-.lista li{
+.lista ul li{
     list-style: none;
     margin: 1em auto;
 }
+
 .lista li a{
     color: #5D6674;
     text-decoration: none;
@@ -69,7 +70,6 @@ body{
     -webkit-transition: .4s;
     -moz-transition: .4s;
     transition: .4s;
-    
 }
 
 .lista li a:hover{
@@ -91,5 +91,37 @@ body{
     bottom: 0;
     color: #5D6674;
     text-align: center;
-    box-shadow: 0px -30px 200px rgb(0, 217, 255);
+}
+
+
+@media screen and (max-width: 1140px){
+
+    .content{
+        width: 100%;
+        margin: 1em auto;
+        background: #FFF;
+        padding: 2em 1em;
+        box-shadow: 0px 4px 11px 3px rgba(0,0,0,.04);
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .lista{
+        width: 100%;
+    }
+    .lista ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .lista ul li{
+        width: 100%;
+        margin: .6em;
+    }
+    .lista ul li a{
+        float: left;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
 }
